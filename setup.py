@@ -9,7 +9,7 @@ HOME = expanduser("~")
 
 # Two options to log in:
 # 1. with the user's email address and password eg. python setup.py user@labkey.org mypassword
-# 2. with an apikey eg. python setup.py apikey "apikey|8f28f044323412342ebb85a2cbab6a4"
+# 2. with an apikey eg. python setup.py apikey "apikey|8f28f044323412cbaw45242342342db6a4"
 
 if len(sys.argv) == 3:
     LOGIN = sys.argv[1]
