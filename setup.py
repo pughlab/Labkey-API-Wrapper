@@ -5,12 +5,11 @@ from os.path import expanduser
 MACHINE = "labkey.uhnresearch.ca"
 LOGIN = ""
 PASSWORD = ""
-NEW_LINE = "\n"
-
+HOME = expanduser("~")
 
 # Two options to log in:
-# 1. with the user's email and password stored in the netrc file eg. user@labkey.org mypassword
-# 2. with an apikey eg. python setup.py apikey password apikey|8f28f044323412342ebb85a2cbab6a4
+# 1. with the user's email address and password eg. python setup.py user@labkey.org mypassword
+# 2. with an apikey eg. python setup.py apikey "apikey|8f28f044323412342ebb85a2cbab6a4"
 
 if len(sys.argv) == 3:
     LOGIN = sys.argv[1]
@@ -24,36 +23,46 @@ def main():
         print 'Error, Module ModuleName is required'
 
     if os.name == 'nt':  # for window machines
-        filename = "_netrc"
+        netrc_file = "_netrc"
     else:
-        filename = ".netrc"
+        netrc_file = ".netrc"
 
     # The file should be located in your home directory
-    HOME = expanduser("~")
-    filename = HOME + "/" + filename
+    filename = HOME + "/" + netrc_file
 
-    # Delete file if it already exists
-    # if path.exists(filename):
-    #     os.remove(filename)
+    # If file exists, copy every line that doesn't have labkey info to temp file, delete filename and replace it.
+    if path.exists(filename):
+        remove_labkey_info(filename, netrc_file)
 
     file = open(filename, "a")
 
-    COMMA = ", "
-    output_line = "machine " + MACHINE + COMMA + "login " + LOGIN + COMMA + "password " + PASSWORD + NEW_LINE;
-    # print(output_line)
-
-    # file.write(output_line)
-
-    file.write("machine " + MACHINE + NEW_LINE)
-    file.write("login " + LOGIN + NEW_LINE)
-    file.write("password " + PASSWORD + NEW_LINE)
+    output_line = "machine " + MACHINE + "\t" + "login " + LOGIN + "\t" + "password " + PASSWORD + "\n"
+    file.write(output_line)
 
     file.close()
 
-    # File set so that you are the only user who can read it
+    # Grant file's full permission to only the user.
     os.chmod(filename, 0o700)
 
-    return
+
+def remove_labkey_info(filename, netrc_file):
+    filename_temp = "temp.txt"
+
+    with open(filename, 'r') as oldfile, open(filename_temp, 'w') as tempFile:
+        for line in oldfile:
+            if not ("labkey" in line):
+                tempFile.write(line)
+
+    os.remove(filename)
+    filename = HOME + "/" + netrc_file
+
+    with open(filename_temp, 'r') as tempFile:
+        with open(filename, 'w') as newfile:
+            for line in tempFile:
+                newfile.write(line)
+
+    os.remove(filename_temp)
+
 
 if __name__ == '__main__':
     main()
