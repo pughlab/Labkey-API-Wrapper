@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import os, sys
 from os import path
 from os.path import expanduser
