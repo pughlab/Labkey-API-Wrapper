@@ -12,13 +12,10 @@ filename = sys.argv[1]
 
 d = {}
 with open(filename) as f:
-    for line in f:
+   json_string = f.readline()
 
-        new_line =  ast.literal_eval(line)
-        print type(line)
-        print type(new_line)
+   print json_string
 
+   json
 # print(d)
 # print(type(d))
-print(new_line.keys())
-print (new_line["rows"][0])
