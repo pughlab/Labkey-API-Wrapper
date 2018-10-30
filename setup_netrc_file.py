@@ -9,8 +9,10 @@ HOME = expanduser("~")
 
 def get_options():
     parser = argparse.ArgumentParser(description="Storing labkey credentials in a netrc file")
-    parser.add_argument("-u", "--user_email", type=str, required=True, help="input project name on Labkey")
-    parser.add_argument("-p", "--user_password", type=str, required=True, help="output file name including path")
+    parser.add_argument("-u", "--user_email", type=str, required=True,
+                        help="input user's email address or the username: apikey")
+    parser.add_argument("-p", "--user_password", type=str, required=True,
+                        help="input user's password or unique apikey")
 
     return parser.parse_args()
 
@@ -27,6 +29,7 @@ def remove_labkey_info(filename, netrc_file):
 
     filename = HOME + "/" + netrc_file
     shutil.copy(filename_temp, filename)
+    os.remove(filename_temp)
 
     return filename
 
@@ -41,6 +44,7 @@ def main():
         import labkey  # Checking if labkey module is installed.
     except ImportError:
         print 'Error, Module ModuleName is required'
+        exit()
 
     if os.name == 'nt':  # for window machines.
         netrc_file = "_netrc"

@@ -35,7 +35,7 @@ def main():
     project_name = args.input.lower()
 
     if project_name not in Labkey_dictionary:
-        print('Caught bad folder name. Please pass in a folder name that is on labkey.')
+        print('Caught bad project name. Please pass in a project name that is on labkey.')
         exit()
     project_datasets = Labkey_dictionary[project_name]
 
