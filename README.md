@@ -21,6 +21,8 @@ Your login credentials will be stored in the .netrc file (_netrc file on windows
 
 <a href="https://www.labkey.org/Documentation/wiki-page.view?name=apikey" target="_blank">https://www.labkey.org/Documentation/wiki-page.view?name=apikey</a>
 
+[https://www.labkey.org/Documentation/wiki-page.view?name=apikey](https://example.org/ "https://www.labkey.org/Documentation/wiki-page.view?name=apikey" target="_blank")
+
 ### 3. Run the get_datasets.py script 
 
 Run the python script and pass the project_name, output file as additional arguments: e.g. $ python get_datasets.py -i “project_name” -o "output_file.json"
