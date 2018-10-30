@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_datasets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup_netrc_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup_netrc_file.py" afterDir="false" />
-    </list>
+    <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/get_datasets.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="545">
-              <caret line="65" column="66" lean-forward="true" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
+              <caret line="65" column="66" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
               <folding>
                 <element signature="e#18#43#0" expanded="true" />
               </folding>
@@ -73,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup_netrc_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="-332">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#19#38#0" expanded="true" />
               </folding>
@@ -184,7 +179,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="348" y="23" width="1037" height="801" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" weight="0.08799342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -328,7 +322,7 @@
     <entry file="file://$PROJECT_DIR$/get_datasets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
-          <caret line="65" column="66" lean-forward="true" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
+          <caret line="65" column="66" selection-start-line="65" selection-start-column="66" selection-end-line="65" selection-end-column="66" />
           <folding>
             <element signature="e#18#43#0" expanded="true" />
           </folding>
@@ -337,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup_netrc_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="-332">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>
