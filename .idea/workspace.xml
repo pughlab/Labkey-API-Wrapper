@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Demo Study/Demographics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cbio_format.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_datasets.py" afterDir="false" />
-    </list>
+    <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="py" value="37" />
+          <entry key="py" value="38" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -37,7 +32,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="37" />
+          <entry key="Python" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="525">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#18#43#0" expanded="true" />
               </folding>
@@ -91,6 +86,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#19#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -99,6 +106,7 @@
       <find>remove_labkey_login_if_an</find>
       <find>.json</find>
       <find>filename</find>
+      <find>util</find>
     </findStrings>
     <replaceStrings>
       <replace>remove_labkey_info</replace>
@@ -148,6 +156,10 @@
               <item name="Labkey_APIs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Labkey_APIs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Labkey_APIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -187,7 +199,7 @@
     <frame x="2687" y="-145" width="1258" height="1340" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" weight="0.087171055" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.087171055" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5023585" side_tool="true" weight="0.061182518" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -198,7 +210,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49850076" weight="0.24439102" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49850076" visible="true" weight="0.24439102" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50149924" side_tool="true" weight="0.32051283" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -281,16 +293,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/result.txt" />
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="50" selection-end-line="73" />
-          <folding>
-            <element signature="e#19#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cbio_format.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -367,10 +369,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#18#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#19#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
