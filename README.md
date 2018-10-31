@@ -26,6 +26,8 @@ Your login credentials will be stored in the .netrc file (_netrc file on windows
 
 ### 3. Run the get_datasets.py script 
 
-Run the python script and pass the project_name, output file as additional arguments: e.g. $ python get_datasets.py -i “project_name” -o "output_file.json"
-
+Run the python script and pass the project_name, output file as additional arguments: 
+```
+$ python get_datasets.py -i “project_name” -o "output_file.json"
+```
 If you need further assistance using our API please contact us at labkey@uhnresearch.ca.
