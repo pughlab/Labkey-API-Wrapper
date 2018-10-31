@@ -13,9 +13,14 @@ Note: For users who installed this package before it was published to PyPI (bef
 ### 2. Run the setup_netrc_file.py script
 
 There are two options to pass the UHN labkey login credentials:
-1. The user's email address and password: e.g. $ python setup_netrc_file.py -u user_email -p user_password
-2. An apikey: e.g. $ python setup_netrc_file.py -u apikey -p "apikey|c2616e2076f23b1dcf4b865f3c7d2i9h”  
-*** Make sure to use quotes around the apikey to prevent an error.
+#### 1. The user's email address and password: 
+```
+$ python setup_netrc_file.py -u user_email -p user_password
+```
+#### 2. An apikey (make sure to use quotes around the apikey to prevent an error): 
+```
+$ python setup_netrc_file.py -u apikey -p "apikey|c2616e2076f23b1dcf4b865f3c7d2i9h” 
+```
 
 Your login credentials will be stored in the .netrc file (_netrc file on windows) in your home directory. We recommend you use the apikey option in order to keep your username and password private. To use the apikey option, here is a well documented page from the offical Labkey website setup: https://www.labkey.org/Documentation/wiki-page.view?name=apikey
 
