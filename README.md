@@ -1,11 +1,13 @@
 # UHN Labkey_APIs
 
+#### The offical Labkey API package can be accessed at https://github.com/LabKey/labkey-api-python
+
 Three simple steps to use Labkey’s API to get data from a Labkey project into a json file.
 1. Install labkey 
 2. Run the setup_netrc_file.py script to create netrc file.
 3. Run the get_datasets.py script
 
-### 1. To install labkey, simply use pip on the command line:
+### 1. To install labkey, simply use pip on the command line: 
 	$ pip install labkey
 
 Note: For users who installed this package before it was published to PyPI (before v0.3.0) it is recommended you uninstall and reinstall the package rather than attempting to upgrade. This is due to a change in the package's versioning semantics.
@@ -30,4 +32,5 @@ Run the python script and pass the project_name, output file as additional argum
 ```
 $ python get_datasets.py -i “project_name” -o "output_file.json"
 ```
+
 If you need further assistance using our API please contact us at labkey@uhnresearch.ca.
