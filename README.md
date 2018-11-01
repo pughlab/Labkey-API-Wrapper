@@ -1,6 +1,6 @@
 # Labkey API Wrapper
 
-***This package is a wrapper script which makes calls to Labkey's api. Labkey maintains their api. The offical Labkey API package can be accessed at https://github.com/LabKey/labkey-api-python***
+***This package is a wrapper script which makes calls to Labkey's API. Labkey maintains their API. The offical Labkey API package can be accessed at https://github.com/LabKey/labkey-api-python***
 
 Three simple steps to use Labkey’s API to get data from a Labkey project into a json file.
 1. Install labkey 
