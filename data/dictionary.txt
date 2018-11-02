@@ -1,1 +1,1 @@
-{"demo/demo study" :["Demographics", "Diagnosis", "Medical History", "Physical Exam", "Treatment Episode", "Treatment Interim Outcome", "Custom Fields", "Specimens"], "comparison": ["Patients", "Treatments", "Specimens", "Samples", "Surgery", "Status", "Radiology", "Lab Test"]}
+{"demo/demo study" :["Patients", "Specimens", "Treatments"], "comparison": ["Patients", "Treatments", "Specimens", "Samples", "Surgery", "Status", "Radiology", "Lab Test"]}
