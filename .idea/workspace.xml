@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dictionary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_datasets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +54,12 @@
     <session id="252275555">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -68,14 +74,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="30" />
+          <entry key="py" value="449" />
+          <entry key="txt" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="PLAIN_TEXT" value="43" />
+          <entry key="Python" value="449" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FavoritesManager">
@@ -83,22 +92,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="57" selection-start-column="57" selection-end-column="57" />
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+            <state relative-caret-position="508">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
               <folding>
                 <element signature="e#18#43#0" expanded="true" />
+                <marker date="1542740313523" expanded="true" signature="2592:2595" ph="..." />
               </folding>
             </state>
           </provider>
@@ -116,15 +126,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup_netrc_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -136,6 +137,7 @@
       <find>util</find>
       <find>password</find>
       <find>RequestAuthorizationError</find>
+      <find>json</find>
     </findStrings>
     <replaceStrings>
       <replace>remove_labkey_info</replace>
@@ -165,16 +167,16 @@
         <option value="$PROJECT_DIR$/../labkey-api-python/samples/query_examples.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/setup_netrc_file.py" />
-        <option value="$PROJECT_DIR$/get_datasets.py" />
         <option value="$PROJECT_DIR$/data/dictionary.txt" />
+        <option value="$PROJECT_DIR$/get_datasets.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2687" />
+    <option name="x" value="2612" />
     <option name="y" value="-145" />
-    <option name="width" value="1258" />
-    <option name="height" value="1340" />
+    <option name="width" value="1298" />
+    <option name="height" value="1307" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -229,10 +231,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2687" y="-145" width="1258" height="1340" extended-state="0" />
+    <frame x="2612" y="-145" width="1298" height="1307" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.088815786" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.0883758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5023585" side_tool="true" weight="0.061182518" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -243,7 +245,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49850076" visible="true" weight="0.23958333" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49850076" visible="true" weight="0.29711935" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50149924" side_tool="true" weight="0.32051283" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -263,11 +265,6 @@
           <url>file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/labkey/query.py</url>
           <line>218</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/get_datasets.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -323,6 +320,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup_netrc_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../labkey-api-python/samples/query_examples.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -333,27 +337,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup_netrc_file.py">
+    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        <state relative-caret-position="508">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding>
             <element signature="e#18#43#0" expanded="true" />
+            <marker date="1542740313523" expanded="true" signature="2592:2595" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" selection-start-column="57" selection-end-column="57" />
         </state>
       </provider>
     </entry>

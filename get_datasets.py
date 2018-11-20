@@ -6,10 +6,6 @@ from labkey.exceptions import QueryNotFoundError
 from labkey.query import select_rows
 
 
-def obj_dict(obj):
-    return obj.__dict__
-
-
 def get_options():
     parser = argparse.ArgumentParser(description="Process the commandline arguments for labkey api")
     parser.add_argument("-i", "--input", type=str, required=True, help="input project name on Labkey")
@@ -31,13 +27,15 @@ def main():
     labkey_server = 'labkey.uhnresearch.ca'
     contextPath = 'labkey'
     schema = 'study'
-    output_folder = "results"
+
     project_name = args.input.lower()
 
     if project_name not in Labkey_dictionary:
         print('Caught bad project name. Please pass in a project name that is on labkey.')
         exit()
     project_datasets = Labkey_dictionary[project_name]
+
+    output_folder = "results"
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -55,17 +53,27 @@ def main():
     print("Created a " + output_file + " file.")
     for table in project_datasets:
         try:
+
             result = select_rows(server_context, schema, table)
 
             if result is not None:
-                dict[table] = result["rows"]
+                row_to_add = result["rows"]
+
+                # Delete Labkey identifier columns from rows
+                for idx in range(len(row_to_add)):
+                    row_to_add[idx].pop(u'_labkeyurl_PATIENT_ID', None)
+                    row_to_add[idx].pop(u'_labkeyurl_ParticipantId', None)
+                    row_to_add[idx].pop(u'lsid', None)
+
+                dict[table] = row_to_add
+
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
             else:
                 print('select_rows: Failed to load results from ' + schema + '.' + table)
         except QueryNotFoundError:
             print('Error: The table ' + table + " was not found.")
 
-    file.write(json.dumps(dict))
+    file.write(json.dumps((dict), indent=4, sort_keys=True))
     file.close()
 
 
