@@ -5,7 +5,6 @@ from labkey.utils import create_server_context
 from labkey.exceptions import QueryNotFoundError
 from labkey.query import select_rows
 
-
 def get_options():
     parser = argparse.ArgumentParser(description="Process the commandline arguments for labkey api")
     parser.add_argument("-i", "--input", type=str, required=True, help="input project name on Labkey")
@@ -16,24 +15,24 @@ def get_options():
 
 def main():
     args = get_options()
-    dicts_from_file = []
+    dictionaryFromFile = []
 
     with open('data/dictionary.txt', 'r') as inf:
         for line in inf:
-            dicts_from_file.append(eval(line))
+            dictionaryFromFile.append(eval(line))
 
-    Labkey_dictionary = dicts_from_file[0]
+    labkeyDictionary = dictionaryFromFile[0]
 
-    labkey_server = 'labkey.uhnresearch.ca'
+    labkeyServer = 'labkey.uhnresearch.ca'
     contextPath = 'labkey'
     schema = 'study'
 
-    project_name = args.input.lower()
+    projectName = args.input.lower()
 
-    if project_name not in Labkey_dictionary:
+    if projectName not in labkeyDictionary:
         print('Caught bad project name. Please pass in a project name that is on labkey.')
         exit()
-    project_datasets = Labkey_dictionary[project_name]
+    projectDatasets = labkeyDictionary[projectName]
 
     output_folder = "results"
 
@@ -46,15 +45,28 @@ def main():
         os.remove(output_file)
 
     print("Create a server context")
-    server_context = create_server_context(labkey_server, project_name, contextPath, use_ssl=True)
+    serverContext = create_server_context(labkeyServer, projectName, contextPath, use_ssl=True)
     file = open(output_file, "w")
     dict = {}
 
     print("Created a " + output_file + " file.")
-    for table in project_datasets:
+    for table in projectDatasets:
         try:
 
-            result = select_rows(server_context, schema, table)
+            ###################
+            # Test sort and select columns
+            ###################
+
+            # column1 = u'PATIENT_ID'
+            # column2 = u'date'
+            # column3 = u'REGISTRATION_DATE'
+            #
+            # result = select_rows(serverContext, schema, table, max_rows=5, offset=10, include_total_count=False,
+            #                      columns=",".join([column1, column2, column3]),
+            #                      sort=column1 + ', -' + column2 + ', -' + column3)  # use '-' to sort descending
+
+
+            result = select_rows(serverContext, schema, table)
 
             if result is not None:
                 row_to_add = result["rows"]
@@ -65,6 +77,8 @@ def main():
                     row_to_add[idx].pop(u'_labkeyurl_ParticipantId', None)
                     row_to_add[idx].pop(u'lsid', None)
 
+                # print type(row_to_add)
+                # print(result["rows"])
                 dict[table] = row_to_add
 
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
@@ -73,7 +87,8 @@ def main():
         except QueryNotFoundError:
             print('Error: The table ' + table + " was not found.")
 
-    file.write(json.dumps((dict), indent=4, sort_keys=True))
+    # file.write(json.dumps((dict), indent=4, sort_keys=True))
+    file.write(json.dumps((dict), indent=4)) #, sort_keys=True))
     file.close()
 
 
