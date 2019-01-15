@@ -53,18 +53,6 @@ def main():
     for table in projectDatasets:
         try:
 
-            ###################
-            # Test sort and select columns
-            ###################
-
-            # column1 = u'PATIENT_ID'
-            # column2 = u'date'
-            # column3 = u'REGISTRATION_DATE'
-            #
-            # result = select_rows(serverContext, schema, table, max_rows=5, offset=10, include_total_count=False,
-            #                      columns=",".join([column1, column2, column3]),
-            #                      sort=column1 + ', -' + column2 + ', -' + column3)  # use '-' to sort descending
-
 
             result = select_rows(serverContext, schema, table)
 
@@ -77,8 +65,6 @@ def main():
                     row_to_add[idx].pop(u'_labkeyurl_ParticipantId', None)
                     row_to_add[idx].pop(u'lsid', None)
 
-                # print type(row_to_add)
-                # print(result["rows"])
                 dict[table] = row_to_add
 
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
@@ -87,7 +73,6 @@ def main():
         except QueryNotFoundError:
             print('Error: The table ' + table + " was not found.")
 
-    # file.write(json.dumps((dict), indent=4, sort_keys=True))
     file.write(json.dumps((dict), indent=4)) #, sort_keys=True))
     file.close()
 
