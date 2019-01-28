@@ -5,6 +5,7 @@ from labkey.utils import create_server_context
 from labkey.exceptions import QueryNotFoundError
 from labkey.query import select_rows
 
+
 def get_options():
     parser = argparse.ArgumentParser(description="Process the commandline arguments for labkey api")
     parser.add_argument("-i", "--input", type=str, required=True, help="input project name on Labkey")
@@ -53,18 +54,16 @@ def main():
     for table in projectDatasets:
         try:
 
-
             result = select_rows(serverContext, schema, table)
 
             if result is not None:
                 row_to_add = result["rows"]
 
-                # Delete Labkey identifier columns from rows
                 for idx in range(len(row_to_add)):
-                    row_to_add[idx].pop(u'_labkeyurl_PATIENT_ID', None)
-                    row_to_add[idx].pop(u'_labkeyurl_ParticipantId', None)
-                    row_to_add[idx].pop(u'lsid', None)
-
+                    row_to_add[idx] = removeUnnecessaryColumns(row_to_add[idx], idx)
+                    row_to_add[idx] = changeDateTimeFormat(row_to_add[idx])
+                    row_to_add[idx] = convertKeyToUpperCase(row_to_add[idx])
+                    row_to_add[idx] = renameSpecificColumns(row_to_add[idx], table)
                 dict[table] = row_to_add
 
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
@@ -73,8 +72,40 @@ def main():
         except QueryNotFoundError:
             print('Error: The table ' + table + " was not found.")
 
-    file.write(json.dumps((dict), indent=4)) #, sort_keys=True))
+    file.write(json.dumps((dict), indent=4, sort_keys=True))
     file.close()
+
+
+def removeUnnecessaryColumns(row_to_add, idx):
+    row_to_add.pop(u'_labkeyurl_PATIENT_ID', None)
+    row_to_add.pop(u'_labkeyurl_ParticipantId', None)
+    row_to_add.pop(u'lsid', None)
+
+    return row_to_add
+
+
+def changeDateTimeFormat(myDict):
+    for key in myDict.keys():
+        if ((type(myDict[key]) == str) and ("00:00:00" in myDict[key])):
+            myDict[key] = myDict[key].split(" ")[0]
+
+    return myDict
+
+
+def convertKeyToUpperCase(myDict):
+    result = {}
+    for key, value in myDict.items():
+        newKey = '_'.join(key.split()).upper()
+        result[newKey] = value
+
+    return result
+
+
+def renameSpecificColumns(rowDict, datasetName):
+    if datasetName == "Patients":
+        rowDict["DATE_OF_BIRTH"] = rowDict.pop("DATE")
+
+    return rowDict
 
 
 if __name__ == "__main__":
