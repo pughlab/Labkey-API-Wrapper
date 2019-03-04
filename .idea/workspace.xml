@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_datasets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +53,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="19" />
-          <entry key="project.open.time.0" value="7" />
+          <entry key="project.open.time.0" value="8" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="5" />
@@ -62,34 +61,35 @@
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gitignore" value="1" />
           <entry key="json" value="1" />
-          <entry key="py" value="3" />
+          <entry key="py" value="4" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="3" />
-          <entry key="py" value="2300" />
+          <entry key="py" value="4111" />
           <entry key="txt" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="2303" />
+          <entry key="Python" value="4114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -101,7 +101,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -109,14 +109,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="198">
+              <caret line="143" column="50" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
               <folding>
-                <marker date="1551386078805" expanded="true" signature="3669:3856" ph="..." />
-                <marker date="1551386078805" expanded="true" signature="3714:3856" ph="..." />
+                <marker date="1551732597769" expanded="true" signature="9058:9183" ph="..." />
               </folding>
             </state>
           </provider>
@@ -137,6 +141,13 @@
       <find>else</find>
       <find>dict</find>
       <find>removeColumnsNotNeeded</find>
+      <find>project</find>
+      <find>result</find>
+      <find>results</find>
+      <find>output_folder</find>
+      <find>output</find>
+      <find>args.</find>
+      <find>output_file</find>
     </findStrings>
     <replaceStrings>
       <replace>remove_labkey_info</replace>
@@ -144,6 +155,7 @@
       <replace>user_password</replace>
       <replace>labkeyDictionary</replace>
       <replace>removeUnnecessaryColumns</replace>
+      <replace>outputFile</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,10 +188,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2465" />
+    <option name="x" value="1710" />
     <option name="y" value="-145" />
-    <option name="width" value="1320" />
-    <option name="height" value="1089" />
+    <option name="width" value="2237" />
+    <option name="height" value="1241" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -235,9 +247,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="23" width="1320" height="832" extended-state="0" />
+    <frame x="1710" y="-145" width="2237" height="1241" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.12441315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.07334852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5023585" side_tool="true" weight="0.061182518" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -248,7 +261,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.650954" visible="true" weight="0.35405406" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.650954" visible="true" weight="0.22802436" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.34904602" side_tool="true" weight="0.369863" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32921812" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -352,20 +365,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/get_datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="198">
+          <caret line="143" column="50" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
           <folding>
-            <marker date="1551386078805" expanded="true" signature="3669:3856" ph="..." />
-            <marker date="1551386078805" expanded="true" signature="3714:3856" ph="..." />
+            <marker date="1551732597769" expanded="true" signature="9058:9183" ph="..." />
           </folding>
         </state>
       </provider>

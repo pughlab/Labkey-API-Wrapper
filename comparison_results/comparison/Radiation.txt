@@ -1,0 +1,77 @@
+#RADIOLOGY_TEST_RESULT_STD	#TREATMENT_MODALITY	#EVENT_TYPE	#SITE	#RADIOLOGY_TEST_RESULT	#Patient Identifier	#DATE	#INSTANCE_NAME_BASELINE	#END_DATE_OF_TREATMENT	#RADIOLOGY_ID	#IMAGING_MODALITIES	#START_INTERVAL_RAD_RAW	#BEGINNING_DATE_OF_TREATMENT	#START_INTERVAL_RAD	
+#RADIOLOGY_TEST_RESULT_STD	#TREATMENT_MODALITY	#EVENT_TYPE	#SITE	#RADIOLOGY_TEST_RESULT	#Patient Identifier	#DATE	#INSTANCE_NAME_BASELINE	#END_DATE_OF_TREATMENT	#RADIOLOGY_ID	#IMAGING_MODALITIES	#START_INTERVAL_RAD_RAW	#BEGINNING_DATE_OF_TREATMENT	#START_INTERVAL_RAD	
+
+1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+RADIOLOGY_TEST_RESULT_STD	TREATMENT_MODALITY	EVENT_TYPE	SITE	RADIOLOGY_TEST_RESULT	PATIENT_ID	DATE	INSTANCE_NAME_BASELINE	END_DATE_OF_TREATMENT	RADIOLOGY_ID	IMAGING_MODALITIES	START_INTERVAL_RAD_RAW	BEGINNING_DATE_OF_TREATMENT	START_INTERVAL_RAD	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-02	2017/07/13	Baseline	NA	1	CT Scan	187	187	187	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-02	2017/07/13	Baseline	NA	2	CT Scan	187	187	187	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-02	2017/07/13	Follow-Up 2018 Nov 30	NA	3	Ultrasound	494	494	494	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-02	2017/07/13	Follow-Up 2018 Jul 18	NA	4	CT Scan	368	368	368	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-02	2017/07/13	Follow-Up 2018 Jul 18	NA	5	CT Scan	368	368	368	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-03	2017/08/31	Follow-Up 2018 Jul 20	NA	10	CT Scan	273	273	273	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-03	2017/08/31	Follow-Up 2018 Jul 20	NA	11	MRI	271	271	271	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-03	2017/08/31	Baseline	NA	6	MRI	111	111	111	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-03	2017/08/31	Baseline	NA	7	MRI	138	138	138	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-03	2017/08/31	Baseline	NA	8	X-ray	145	145	145	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-03	2017/08/31	Follow-Up 2018 Jul 20	NA	9	CT Scan	273	273	273	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	12	MRI	73	73	73	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	13	CT Scan	52	52	52	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	14	CT Scan	1453	1453	1453	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	15	MRI	1453	1453	1453	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	16	CT Scan	227	227	227	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	17	MRI	229	229	229	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Baseline	NA	18	CT Scan	147	147	147	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-04	2017/06/13	Follow-Up 2018 Jun 15	NA	19	X-ray	267	267	267	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-04	2017/06/13	Follow-Up 2018 Sep 06	NA	20	CT Scan	459	459	459	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-05	2017/09/14	Baseline	NA	21	CT Scan	42	42	42	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-05	2017/09/14	Baseline	NA	22	CT Scan	1	1	1	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-05	2017/09/14	Baseline	NA	23	CT Scan	0	0	0	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-05	2017/09/14	Baseline	NA	24	CT Scan	112	112	112	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-05	2017/09/14	Baseline	NA	25	MRI	128	128	128	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-05	2017/09/14	Follow-Up 2018 Apr 04	NA	26	CT Scan	168	168	168	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-06	2017/09/18	Baseline	NA	27	CT Scan	155	155	155	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-06	2017/09/18	Baseline	NA	28	CT Scan	155	155	155	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-06	2017/09/18	Baseline	NA	29	MRI	45	45	45	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-06	2017/09/18	Baseline	NA	30	CT Scan	31	31	31	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-06	2017/09/18	Baseline	NA	31	CT Scan	22	22	22	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-06	2017/09/18	Baseline	NA	32	Bone Scan	31	31	31	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-06	2017/09/18	Baseline	NA	33	MRI	155	155	155	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-07	2018/02/26	Baseline	NA	34	MRI	85	85	85	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-07	2018/02/26	Baseline	NA	35	CT Scan	128	128	128	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-07	2018/02/26	Baseline	NA	36	MRI	157	157	157	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-07	2018/02/26	Follow-Up 2018 Nov 07	NA	37	CT Scan	210	210	210	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-07	2018/02/26	Follow-Up 2018 Nov 07	NA	38	CT Scan	215	215	215	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-07	2018/02/26	Follow-Up 2018 Nov 07	NA	39	CT Scan	215	215	215	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	40	MRI	11	11	11	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	41	CT Scan	13	13	13	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-08	2017/12/22	Baseline	NA	42	CT Scan	13	13	13	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	43	MRI	19	19	19	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	44	MRI	86	86	86	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	45	MRI	122	122	122	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-08	2017/12/22	Baseline	NA	46	X-ray	192	192	192	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-08	2017/12/22	Baseline	NA	47	CT Scan	262	262	262	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	48	CT Scan	262	262	262	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	49	Ultrasound	301	301	301	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-08	2017/12/22	Baseline	NA	50	X-ray	155	155	155	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-08	2017/12/22	Baseline	NA	51	X-ray	157	157	157	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-08	2017/12/22	Baseline	NA	52	X-ray	193	193	193	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-08	2017/12/22	Baseline	NA	53	X-ray	202	202	202	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	54	MRI	180	180	180	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-08	2017/12/22	Baseline	NA	55	CT Scan	187	187	187	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-09	2016/01/21	Baseline	NA	56	CT Scan	281	281	281	
+1	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Normal	CMP-01-09	2016/01/21	Baseline	NA	57	Bone Scan	67	67	67	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-09	2016/01/21	Baseline	NA	58	CT Scan	32	32	32	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-09	2016/01/21	Baseline	NA	59	CT Scan	2	2	2	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-09	2016/01/21	Baseline	NA	60	CT Scan	975	975	975	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-09	2016/01/21	Baseline	NA	61	CT Scan	806	806	806	
+3	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Malignant	CMP-01-09	2016/01/21	Baseline	NA	62	MRI	1037	1037	1037	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-09	2016/01/21	Baseline	NA	63	CT Scan	624	624	624	
+2	RADIATION THERAPY	IMAGING	Princess Margaret Cancer Centre 	Abnormal, Non-Malignant	CMP-01-09	2016/01/21	Baseline	NA	64	CT Scan	438	438	438	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-01	2017/03/27	Baseline	NA	65	CT Scan	434	434	434	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-01	2017/03/27	Follow-Up 2018 Nov 15	NA	66	CT Scan	590	590	590	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-01	2017/03/27	Follow-Up 2019 Jan 31	NA	67	CT Scan	655	655	655	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-01	2017/03/27	Follow-Up 2019 Jan 31	NA	68	PET Scan	669	669	669	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-02	2017/12/12	Baseline	NA	69	PET Scan	276	276	276	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-03	2017/12/05	Baseline	NA	70	PET Scan	268	268	268	
+3	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Malignant	CMP-02-03	2017/12/05	Baseline	NA	71	MRI	268	268	268	
+2	RADIATION THERAPY	IMAGING	BCCA Vancouver Cancer Centre	Abnormal, Non-Malignant	CMP-02-03	2017/12/05	Follow-Up 2018 Dec 11	NA	72	CT Scan	365	365	365	

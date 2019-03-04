@@ -1,0 +1,33 @@
+#TREATMENT_MODALITY	#Date of Diagnosis	#COLLECTION_TIMEPOINT	#SURGERY_SITE	#Patient Identifier	#BEGINNING_DATE_OF_TREATMENT	#Sample Identifier	#DATE	#SURGERY_TYPE	#END_DATE_OF_TREATMENT	#EVENT_TYPE	
+#TREATMENT_MODALITY	#Date of Diagnosis	#COLLECTION_TIMEPOINT	#SURGERY_SITE	#Patient Identifier	#BEGINNING_DATE_OF_TREATMENT	#Sample Identifier	#DATE	#SURGERY_TYPE	#END_DATE_OF_TREATMENT	#EVENT_TYPE	
+
+1	1	1	1	1	1	1	1	1	1	1	
+TREATMENT_MODALITY	DATE_OF_DEFINITIVE_DIAGNOSIS	COLLECTION_TIMEPOINT	SURGERY_SITE	PATIENT_ID	BEGINNING_DATE_OF_TREATMENT	SAMPLE_ID	DATE	SURGERY_TYPE	END_DATE_OF_TREATMENT	EVENT_TYPE	
+SURGERY	2017/07/13	Archival	Primary lesion	CMP-01-02	76	CMP-01-02-ARC	2017/09/27	Low anterior resection	NA	SURGERY	
+SURGERY	2017/07/13	Liver Metastectomy	Normal liver tissue	CMP-01-02	217	CMP-01-02-SUR-N	2018/02/15	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/07/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-02	217	CMP-01-02-SUR-T1	2018/02/15	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/07/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-02	217	CMP-01-02-SUR-T2	2018/02/15	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/08/31	Liver Metastectomy	Normal liver tissue	CMP-01-03	151	CMP-01-03-SUR-N	2018/01/29	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/08/31	Liver Metastectomy	Metastatic liver lesion	CMP-01-03	151	CMP-01-03-SUR-T1	2018/01/29	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/08/31	Archival	Primary lesion	CMP-01-03	288	CMP-01-03-ACR	2018/06/15	Low anterior resection	NA	SURGERY	
+SURGERY	2017/06/13	Archival	Primary lesion	CMP-01-04	17	CMP-01-04-ARC	2017/06/30	Low anterior resection	NA	SURGERY	
+SURGERY	2017/06/13	Liver Metastectomy	Normal liver tissue	CMP-01-04	266	CMP-01-04-SUR-N	2018/03/06	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/06/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-04	266	CMP-01-04-SUR-T1	2018/03/06	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/06/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-04	266	CMP-01-04-SUR-T2	2018/03/06	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/06/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-04	266	CMP-01-04-SUR-T3	2018/03/06	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/06/13	Liver Metastectomy	Metastatic liver lesion	CMP-01-04	266	CMP-01-04-SUR-T4	2018/03/06	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/09/14	Liver Metastectomy	Normal liver tissue	CMP-01-05	166	CMP-01-05-SUR-N	2018/02/27	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/09/14	Liver Metastectomy	Metastatic liver lesion	CMP-01-05	166	CMP-01-05-SUR-T1	2018/02/27	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/09/14	CONCURRENT PRIMARY RESECTION	Primary lesion	CMP-01-05	166	CMP-01-05-SUR-T2	2018/02/27	Right hemicolectomy	NA	SURGERY	
+SURGERY	2017/09/18	Liver Metastectomy	Normal liver tissue	CMP-01-06	214	CMP-01-06-SUR-N	2018/04/20	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/09/18	Liver Metastectomy	Metastatic liver lesion	CMP-01-06	214	CMP-01-06-SUR-T1	2018/04/20	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/09/18	Liver Metastectomy	Primary lesion	CMP-01-06	214	CMP-01-06-SUR-T2	2018/04/20	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/12/22	Liver Metastectomy	Normal liver tissue	CMP-01-07	270	CMP-01-07-SUR-N	2018/09/18	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/12/22	Liver Metastectomy	Metastatic liver lesion	CMP-01-07	270	CMP-01-07-SUR-T1	2018/09/18	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/12/22	Liver Metastectomy	Primary lesion	CMP-01-07	270	CMP-01-07-SUR-T2	2018/09/18	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/12/22	Archival	Primary lesion	CMP-01-08	153	CMP-01-08-ARC	2018/05/24	Low anterior resection	NA	SURGERY	
+SURGERY	2016/01/21	Archival	Primary lesion	CMP-01-09	0	CMP-01-09-ARC	2016/01/21	Low anterior resection	NA	SURGERY	
+SURGERY	2016/01/21	Liver Metastectomy	Normal liver tissue	CMP-01-09	1041	CMP-01-09-SUR-N	2018/11/27	Liver metastectomy	NA	SURGERY	
+SURGERY	2016/01/21	Liver Metastectomy	Metastatic liver lesion	CMP-01-09	1041	CMP-01-09-SUR-T1	2018/11/27	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/03/27	Liver Metastectomy	Metastatic liver lesion	CMP-02-01	452	CMP-02-01-SUR-T2	2018/06/22	Liver metastectomy	NA	SURGERY	
+SURGERY	2017/12/05	Liver Metastectomy	Metastatic liver lesion	CMP-02-03	274	CMP-02-01-SUR-T1	2018/09/05	Liver metastectomy	NA	SURGERY	
