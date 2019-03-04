@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import os, json, argparse
 
 from labkey.utils import create_server_context
@@ -61,9 +61,12 @@ def main():
 
                 for idx in range(len(row_to_add)):
                     row_to_add[idx] = removeUnnecessaryColumns(row_to_add[idx], idx)
+                    # print(row_to_add[idx])
+                    row_to_add[idx] = (row_to_add[idx])
                     row_to_add[idx] = changeDateTimeFormat(row_to_add[idx])
                     row_to_add[idx] = convertKeyToUpperCase(row_to_add[idx])
                     row_to_add[idx] = renameSpecificColumns(row_to_add[idx], table)
+
                 dict[table] = row_to_add
 
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
@@ -73,6 +76,7 @@ def main():
             print('Error: The table ' + table + " was not found.")
 
     file.write(json.dumps((dict), indent=4, sort_keys=True))
+    # file.write(json.dumps(dict)) #, indent=4, sort_keys=True))
     file.close()
 
 
@@ -86,15 +90,16 @@ def removeUnnecessaryColumns(row_to_add, idx):
 
 def changeDateTimeFormat(myDict):
     for key in myDict.keys():
-        if ((type(myDict[key]) == str) and ("00:00:00" in myDict[key])):
+        if (((type(myDict[key]) == str) and ("00:00:00" in myDict[key])) or (
+        (isinstance(myDict[key], unicode) and (u'00:00:00' in myDict[key])))):
             myDict[key] = myDict[key].split(" ")[0]
 
     return myDict
 
 
-def convertKeyToUpperCase(myDict):
+def convertKeyToUpperCase(rowDict):
     result = {}
-    for key, value in myDict.items():
+    for key, value in rowDict.items():
         newKey = '_'.join(key.split()).upper()
         result[newKey] = value
 
@@ -108,5 +113,18 @@ def renameSpecificColumns(rowDict, datasetName):
     return rowDict
 
 
+def removeTrailingSpacesInValues(rowDict):
+    for key in rowDict.keys():
+        if (type(rowDict[key]) == str):
+            rowDict[key] = rowDict[key].strip()
+
+    return rowDict
+
+
 if __name__ == "__main__":
     main()
+    myDict = {'DATE': '2018/06/25   ', 'TIME_POINT': 'Post-Op  ', 'TEST_RESULT': 1, 'END_DATE_OF_TREATMENT': 'NA',
+              'BEGINNING_DATE_OF_TREATMENT': 455, 'EVENT_TYPE': 'CTDNA BLOOD DRAW', 'COLLECTION_DATE': '2018/06/25',
+              'PATIENT_ID': 'CMP-02-01'}
+
+    # result  = removeTrailingSpacesInValues(myDict)
