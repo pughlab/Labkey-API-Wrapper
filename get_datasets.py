@@ -71,7 +71,7 @@ def main():
         exit()
     projectDatasets = labkeyDictionary[projectName]
 
-    outputFolder = args.project + "_results"
+    outputFolder = "results"
 
     if not os.path.exists(outputFolder):
         os.makedirs(outputFolder)
