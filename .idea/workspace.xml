@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608f17da-4872-4591-9031-975ae5aebe48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison.json" beforeDir="false" afterPath="$PROJECT_DIR$/comparison_results/comparison.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Lab Test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Patients.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Prior Treatments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Radiation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Samples.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Specimens.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Status.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Surgery.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison_results/comparison/Treatments.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/get_datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_datasets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,16 +63,16 @@
     <session id="252275555">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="8" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="5" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.3" value="6" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,14 +93,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="3" />
-          <entry key="py" value="4111" />
+          <entry key="py" value="4608" />
           <entry key="txt" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="4114" />
+          <entry key="Python" value="4611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -117,11 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="143" column="50" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-              <folding>
-                <marker date="1551732597769" expanded="true" signature="9058:9183" ph="..." />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -137,7 +145,6 @@
       <find>util</find>
       <find>password</find>
       <find>RequestAuthorizationError</find>
-      <find>json</find>
       <find>else</find>
       <find>dict</find>
       <find>removeColumnsNotNeeded</find>
@@ -146,8 +153,12 @@
       <find>results</find>
       <find>output_folder</find>
       <find>output</find>
-      <find>args.</find>
       <find>output_file</find>
+      <find>removeTrailingSpacesInValues</find>
+      <find>json</find>
+      <find>outputFile</find>
+      <find>file</find>
+      <find>args.</find>
     </findStrings>
     <replaceStrings>
       <replace>remove_labkey_info</replace>
@@ -188,10 +199,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1710" />
+    <option name="x" value="2406" />
     <option name="y" value="-145" />
-    <option name="width" value="2237" />
-    <option name="height" value="1241" />
+    <option name="width" value="1468" />
+    <option name="height" value="1256" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -247,10 +258,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1710" y="-145" width="2237" height="1241" extended-state="0" />
+    <frame x="2406" y="-145" width="1468" height="1256" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.07334852" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976415" visible="true" weight="0.11500701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5023585" side_tool="true" weight="0.061182518" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -261,13 +272,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.650954" visible="true" weight="0.22802436" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.650954" visible="true" weight="0.24484536" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.34904602" side_tool="true" weight="0.369863" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32921812" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.3251058" />
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
@@ -351,13 +362,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Jila/program.py" />
-    <entry file="file://$PROJECT_DIR$/results/comparison3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/comparison3.json" />
     <entry file="file://$PROJECT_DIR$/../AutoScript/json_to_cbio_format.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1333">
@@ -377,11 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="143" column="50" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-          <folding>
-            <marker date="1551732597769" expanded="true" signature="9058:9183" ph="..." />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
         </state>
       </provider>
     </entry>

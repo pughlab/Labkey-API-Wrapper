@@ -18,6 +18,8 @@ metadataDict = {'METASTATIC_SITE': 'Override TUMOR_SITE (patient level attribute
                 'DFS_MONTHS': 'Disease Free (Months)', 'DFS_STATUS': 'Disease Free Status',
                 'OS_STATUS': 'Overall Survival Status'}
 
+datasetsWithMetadata = ["patients", "samples", "treatments"]
+
 
 def get_options():
     parser = argparse.ArgumentParser(description="Process the commandline arguments for labkey api")
@@ -34,12 +36,6 @@ def createDirectory(dirName):
 
     os.mkdir(dirName)
 
-
-# def getOutputDirectory():
-#     currectDirectoryPath = os.path.dirname(os.path.realpath(__file__))
-#     outputDirectory = os.path.join(currectDirectoryPath, outputDir)
-#
-#     return outputDirectory
 
 def renameColumnNames(inputList):
     outputList = []
@@ -80,72 +76,65 @@ def main():
     if not os.path.exists(outputFolder):
         os.makedirs(outputFolder)
 
-    outputFile = os.path.join(outputFolder, args.project.lower() + ".json")
-    print(outputFile)
+
 
     print("Create a server context")
     serverContext = create_server_context(labkeyServer, projectName, contextPath, use_ssl=True)
-    file = open(outputFile, "w")
+
+    if args.json:
+        print("JSON output required.")
+        outputFile = os.path.join(outputFolder, args.project.lower() + ".json")
+        file = open(outputFile, "w")
+        print("Created a " + outputFile + " file.")
+
     dict = {}
 
     if (args.cbio):
-        print("Cbio output required")
+        print("Cbio output required.")
         outputCbioDir = args.project.lower()
         createDirectory(outputFolder + "/" + outputCbioDir)
 
-    print("Created a " + outputFile + " file.")
+
 
     for table in projectDatasets:
 
-        # cbioOutputRequired = args.cbio.lower()
-        #
-        # print(cbioOutputRequired)
-        # if ()
-        # print(table)# + projectDatasets)
         try:
 
             result = select_rows(serverContext, schema, table)
 
             if result is not None:
                 row_to_add = result["rows"]
-                # print(row_to_add)
-
-                # newFilePath =
 
                 if (args.cbio):
                     newFile = open(outputFolder + "/" + outputCbioDir + "/" + table + ".txt", "w")
-                    # print(outputFolder + "/" + outputCbioDir + "/" + table + ".txt")
-                    # print(newFilePath)
                     header = True
 
                 for idx in range(len(row_to_add)):
-                    # print(row_to_add[idx])
-                    row_to_add[idx] = removeUnnecessaryColumns(row_to_add[idx], idx)
-                    # print(row_to_add[idx])
-                    row_to_add[idx] = (row_to_add[idx])
+
+                    row_to_add[idx] = removeUnnecessaryColumns(row_to_add[idx])
+                    row_to_add[idx] = convertUnicodeToASCII(row_to_add[idx])
+                    row_to_add[idx] = removeTrailingSpacesInValues(row_to_add[idx])
                     row_to_add[idx] = changeDateTimeFormat(row_to_add[idx])
                     row_to_add[idx] = convertKeyToUpperCase(row_to_add[idx])
                     row_to_add[idx] = renameSpecificColumns(row_to_add[idx], table)
 
 
-                    # print(row_to_add[0])
-
                     if (args.cbio):
 
                         rowDict = row_to_add[idx]
                         rowDictHeader = ""
+                        rowDictHeaderValuesList = []
                         rowDictvalues = ""
 
                         if (header):
                             for key in rowDict.keys():
                                 rowDictHeader += key + "\t"
+                                rowDictHeaderValuesList.append(rowDict[key])
 
                             rowDictHeader.strip()
-                            print("rowDictHeader: " + rowDictHeader)
-                            print(table)
-                            print(rowDictHeader)
-
-                            newFile.write(createMetadata(rowDictHeader) + "\n")
+                            if table.lower() in datasetsWithMetadata:
+                                # createMetadata(inputString, rowDictHeaderValuesList)
+                                newFile.write(createMetadata(rowDictHeader, rowDictHeaderValuesList) + "\n")
                             newFile.write(rowDictHeader + "\n")
                             header = False
 
@@ -155,19 +144,12 @@ def main():
                                 rowDictvalues += str(rowDict[key]) + "\t"
                             else:
                                 rowDictvalues += rowDict[key] + "\t"
-                            # print(rowDict[key])
                         rowDictvalues.strip()
                         newFile.write(rowDictvalues + "\n")
-                    # print(rowDictvalues)
-
-                    # print(row_to_add[idx])
-                    # print("\n---------------------------------\n")
-                    # file.write(str(row_to_add[idx]))
 
                 if (args.cbio):
                     newFile.close()
-                # print(row_to_add)
-                # print("\n---------------------------------\n")
+
                 dict[table] = row_to_add
 
                 print("From the dataset " + table + ", the number of rows returned: " + str(result['rowCount']))
@@ -176,11 +158,23 @@ def main():
         except QueryNotFoundError:
             print('Error: The table ' + table + " was not found.")
 
-    file.write(json.dumps((dict), indent=4, sort_keys=True))
-    file.close()
+    if args.json:
+        file.write(json.dumps((dict), indent=4, sort_keys=True))
+        file.close()
 
 
-def removeUnnecessaryColumns(row_to_add, idx):
+def convertUnicodeToASCII(input):
+    if isinstance(input, dict):
+        return {convertUnicodeToASCII(key): convertUnicodeToASCII(value) for key, value in input.iteritems()}
+    elif isinstance(input, list):
+        return [convertUnicodeToASCII(element) for element in input]
+    elif isinstance(input, unicode):
+        return input.encode('utf-8')
+    else:
+        return input
+
+
+def removeUnnecessaryColumns(row_to_add):
     row_to_add.pop(u'_labkeyurl_PATIENT_ID', None)
     row_to_add.pop(u'_labkeyurl_ParticipantId', None)
     row_to_add.pop(u'lsid', None)
@@ -215,53 +209,47 @@ def renameSpecificColumns(rowDict, datasetName):
 
 def removeTrailingSpacesInValues(rowDict):
     for key in rowDict.keys():
-        if (type(rowDict[key]) == str):
-            rowDict[key] = rowDict[key].strip()
+        val = rowDict[key]
+
+        if (type(val) == str):
+            rowDict[key] = val.strip()
+
+        if (type(val) is not int) and (type(val) is not float) and (val != None):
+            if val.strip().isdigit():
+                rowDict[key] = int(val)
 
     return rowDict
 
 
-def createMetadata(inputString):
+def createMetadata(inputString, rowDictHeaderValuesList):
     rowDictHeader = inputString.strip().split()
-    rowDictvalues = ""
-    #
-    # for key in rowDict.keys():
-    #     rowDictHeader += key + "\t"
-    #     rowDictvalues += rowDict[key + "\t"
-    #
-    #     headerList = rowDictHeader.strip().split()
-    #     valuesList = rowDictvalues.strip().split()
-    # print(headerList)
+    # print(rowDictHeaderValuesList)
 
-    newStr = ""
-    inputStrOfTypes = ""
-    onesStr = ""
-    # listOfOnes = [1] * len(inputList)
-    # print(listOfOnes)
-    # listOfOnesStr = "\t".join(listOfOnes)
-    # # listOfOnesStr = "\t".join( str(x) for x in listOfOnes)
-    #
-    # print(listOfOnesStr)
+    # print(rowDictHeader)
+    newStr = "#"
+    inputStrOfTypes = "#"
+    onesStr = "#"
 
     for i in rowDictHeader:
-        print(i, type(i))
+        # print(i, type(i))
 
         if i in metadataDict:
 
-            newStr += "#" + metadataDict[i] + "\t"
+            newStr += metadataDict[i] + "\t"
         elif i not in metadataDict:
-            newStr += "#" + i + "\t"
+            newStr += i + "\t"
 
-    # for val in
-        if (i.isdigit()):
+    for i in rowDictHeaderValuesList:
+        # print(i, type(i))
+        if type(i) == int:
 
-            inputStrOfTypes += "#" + "NUMBER" + "\t"
+            inputStrOfTypes += "NUMBER" + "\t"
         elif type(i) == str:
-            print("String")
-            inputStrOfTypes += "#" + "STRING" + "\t"
+            # print("String")
+            inputStrOfTypes += "STRING" + "\t"
         onesStr += "1" + "\t"
 
-    print(inputStrOfTypes)
+    # print(inputStrOfTypes)
     newStr.strip()
     inputStrOfTypes.strip()
     onesStr.strip()
@@ -273,9 +261,10 @@ def createMetadata(inputString):
     # print(inputList)
     # print(newStr)
     # print("-------------------\n")
-    print(outputStr)
+    # print(outputStr)
 
     return outputStr
+
 
 if __name__ == "__main__":
     main()

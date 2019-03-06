@@ -1,7 +1,7 @@
-#TUMOR_SITE	#COLLECTION_TIMEPOINT	#CANCER_TYPE	#Patient Identifier	#START_INTERVAL	#Sample Identifier	#DATE	#Cancer Type Detailed, a sub-type of the specified CANCER_TYPE	
-#TUMOR_SITE	#COLLECTION_TIMEPOINT	#CANCER_TYPE	#Patient Identifier	#START_INTERVAL	#Sample Identifier	#DATE	#Cancer Type Detailed, a sub-type of the specified CANCER_TYPE	
-
-1	1	1	1	1	1	1	1	
+#TUMOR_SITE	COLLECTION_TIMEPOINT	CANCER_TYPE	Patient Identifier	START_INTERVAL	Sample Identifier	DATE	Cancer Type Detailed, a sub-type of the specified CANCER_TYPE	
+#TUMOR_SITE	COLLECTION_TIMEPOINT	CANCER_TYPE	Patient Identifier	START_INTERVAL	Sample Identifier	DATE	Cancer Type Detailed, a sub-type of the specified CANCER_TYPE	
+#STRING	STRING	STRING	STRING	NUMBER	STRING	STRING	STRING	
+#1	1	1	1	1	1	1	1	
 TUMOR_SITE	COLLECTION_TIMEPOINT	CANCER_TYPE	PATIENT_ID	START_INTERVAL	SAMPLE_ID	DATE	CANCER_TYPE_DETAILED	
 Primary lesion	Archival	COAD	CMP-01-02	76	CMP-01-02-ARC	2017/09/27	Colon Adenocarcinoma	
 Normal liver tissue	Liver Metastectomy	COAD	CMP-01-02	217	CMP-01-02-SUR-N	2018/02/15	Colon Adenocarcinoma	
