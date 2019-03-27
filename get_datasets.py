@@ -23,9 +23,9 @@ datasetsWithMetadata = ["patients", "samples", "treatments"]
 
 def get_options():
     parser = argparse.ArgumentParser(description="Process the commandline arguments for labkey api")
-    parser.add_argument("-p", "--project", type=str, required=True, help="input project name on Labkey")
-    parser.add_argument("-j", "--json", type=str, help="output file name including path")
-    parser.add_argument("-c", "--cbio", type=str, help="cbio output if needed")
+    parser.add_argument("-p", "--project", type=str, required=True, help="Input project name on Labkey")
+    parser.add_argument("-j", "--json", type=str, help="add the flag '-Json' to create a json file.")
+    parser.add_argument("-c", "--cbio", type=str, help="add the flag 'cbio' to create a dir containing files to input in cbioportal.ca.")
 
     return parser.parse_args()
 
@@ -76,14 +76,17 @@ def main():
     if not os.path.exists(outputFolder):
         os.makedirs(outputFolder)
 
-
-
     print("Create a server context")
     serverContext = create_server_context(labkeyServer, projectName, contextPath, use_ssl=True)
 
     if args.json:
         print("JSON output required.")
-        outputFile = os.path.join(outputFolder, args.project.lower() + ".json")
+        # args.project.lower()
+        # print(projectName)
+        # print(projectName.split("/")[-1].lower())
+        outputFile = os.path.join(outputFolder, projectName.split("/")[-1].lower()+ ".json")
+        # print(args.project.lower())
+        # print(outputFile)
         file = open(outputFile, "w")
         print("Created a " + outputFile + " file.")
 
@@ -94,10 +97,8 @@ def main():
         outputCbioDir = args.project.lower()
         createDirectory(outputFolder + "/" + outputCbioDir)
 
-
-
     for table in projectDatasets:
-
+        # print(table)
         try:
 
             result = select_rows(serverContext, schema, table)
@@ -118,7 +119,6 @@ def main():
                     row_to_add[idx] = convertKeyToUpperCase(row_to_add[idx])
                     row_to_add[idx] = renameSpecificColumns(row_to_add[idx], table)
 
-
                     if (args.cbio):
 
                         rowDict = row_to_add[idx]
@@ -127,14 +127,35 @@ def main():
                         rowDictvalues = ""
 
                         if (header):
+                            print(rowDict)
                             for key in rowDict.keys():
+                                print(key)
                                 rowDictHeader += key + "\t"
-                                rowDictHeaderValuesList.append(rowDict[key])
+                                rowDictHeaderValues = rowDict[key] + "\t"
+                                # rowDictHeaderValuesList.append(rowDict[key])
 
                             rowDictHeader.strip()
                             if table.lower() in datasetsWithMetadata:
+                                rowDictHeaderValuesList = rowDictHeaderValues.split("\t")
+
+                                # print(rowDictHeader)
+                                metadataList = rowDictHeader.split("\t")
+                                patientIdIdx = metadataList.index("PATIENT_ID")
+                                metadataStr = rearrangeColumns(metadataList, patientIdIdx)
+                                print(rowDictHeaderValuesList)
+                                newRowDictHeaderValuesList = rearrangeColumns(rowDictHeaderValuesList, patientIdIdx)
+                                print(newRowDictHeaderValuesList)
+
                                 # createMetadata(inputString, rowDictHeaderValuesList)
-                                newFile.write(createMetadata(rowDictHeader, rowDictHeaderValuesList) + "\n")
+                                print(rowDictHeaderValuesList)
+                                newFile.write(createMetadata(metadataStr, rowDictHeaderValuesList) + "\n")
+                            # print(rowDictHeader.split("\t"))
+                            headerList = rowDictHeader.split("\t")
+
+                            patientIdIdx = headerList.index("PATIENT_ID")
+                            rowDictHeader = rearrangeColumns(headerList, patientIdIdx)
+
+                            # print(newRowDictHeader)
                             newFile.write(rowDictHeader + "\n")
                             header = False
 
@@ -145,6 +166,14 @@ def main():
                             else:
                                 rowDictvalues += rowDict[key] + "\t"
                         rowDictvalues.strip()
+
+
+                        rowDictvaluesList = rowDictvalues.split("\t")
+                        # rowDictvalues = rearrangeColumns(rowDictvaluesList, patientIdIdx)
+
+                        # print(patientIdIdx)
+                        # print(rowDictvalues)
+                        # print(rowDictvalues)
                         newFile.write(rowDictvalues + "\n")
 
                 if (args.cbio):
@@ -162,6 +191,17 @@ def main():
         file.write(json.dumps((dict), indent=4, sort_keys=True))
         file.close()
 
+
+
+
+
+def rearrangeColumns(inputList, idx):
+    outputList = inputList[idx:idx + 1] + inputList[:idx] + inputList[idx + 1:]
+
+    outputStr = '\t'.join([str(x) for x in outputList])
+
+    # print(outputList)
+    return outputStr
 
 def convertUnicodeToASCII(input):
     if isinstance(input, dict):
@@ -208,14 +248,17 @@ def renameSpecificColumns(rowDict, datasetName):
 
 
 def removeTrailingSpacesInValues(rowDict):
+
     for key in rowDict.keys():
         val = rowDict[key]
+        # print(key, val)
 
         if (type(val) == str):
-            rowDict[key] = val.strip()
-
-        if (type(val) is not int) and (type(val) is not float) and (val != None):
-            if val.strip().isdigit():
+            val = val.strip()
+            rowDict[key] = val
+            # print(val)
+            if val.isdigit():
+                # print(val)
                 rowDict[key] = int(val)
 
     return rowDict
@@ -223,7 +266,7 @@ def removeTrailingSpacesInValues(rowDict):
 
 def createMetadata(inputString, rowDictHeaderValuesList):
     rowDictHeader = inputString.strip().split()
-    # print(rowDictHeaderValuesList)
+    # print(inputString)# print(rowDictHeaderValuesList)
 
     # print(rowDictHeader)
     newStr = "#"
@@ -239,6 +282,9 @@ def createMetadata(inputString, rowDictHeaderValuesList):
         elif i not in metadataDict:
             newStr += i + "\t"
 
+    print("HERE--------------_")
+    print(rowDictHeader)
+    print(rowDictHeaderValuesList)
     for i in rowDictHeaderValuesList:
         # print(i, type(i))
         if type(i) == int:
