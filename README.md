@@ -2,6 +2,8 @@
 
 ***This package is a wrapper script which makes calls to Labkey's API. Labkey maintains their API. The offical Labkey API package can be accessed at https://github.com/LabKey/labkey-api-python***
 
+***PLEASE NOTE: This wrapper script only works for certain projects. We are currently working on making it support the [genie standard's paper](./genie/mmc2.pdf) and other formats.***
+
 Three simple steps to use Labkey’s API to get data from a Labkey project into a json file.
 1. Install labkey 
 2. Run the setup_netrc_file.py script to create netrc file.
